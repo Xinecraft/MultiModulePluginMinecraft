@@ -1,0 +1,4 @@
+name: HelloAllinOneBungee
+version: '${version}'
+main: com.xinecraft.helloallinone.bungee.HelloAllinOneBungee
+author: xinecraft

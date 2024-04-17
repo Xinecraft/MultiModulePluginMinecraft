@@ -1,0 +1,6 @@
+rootProject.name = 'HelloAllinOne'
+include 'common'
+include 'spigot'
+include 'bungee'
+include 'velocity'
+include 'assembly'

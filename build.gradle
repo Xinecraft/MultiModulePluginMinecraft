@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+    id 'maven-publish'
+    id 'eclipse'
+    id "org.jetbrains.gradle.plugin.idea-ext" version "1.0.1"
+}
+
+allprojects {
+    group = 'com.xinecraft'
+    version = '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://repo.enonic.com/public/' }
+        maven { url "https://oss.sonatype.org/content/groups/public/" }
+        maven { url "https://repo.aikar.co/content/groups/aikar/" }
+        maven { url 'https://papermc.io/repo/repository/maven-public/' }
+        maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+        maven { url "https://maven.matrixstudios.ltd/public" }
+    }
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "com.github.johnrengelman.shadow"
+    apply plugin: "maven-publish"
+
+    dependencies {
+        //lombok
+        compileOnly 'org.projectlombok:lombok:1.18.22'
+    }
+
+    java {
+        toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}

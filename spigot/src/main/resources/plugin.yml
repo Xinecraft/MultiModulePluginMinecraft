@@ -1,0 +1,4 @@
+name: HelloAllinOneSpigot
+version: '${version}'
+main: com.xinecraft.helloallinone.spigot.HelloAllinOneSpigot
+api-version: '1.20'
